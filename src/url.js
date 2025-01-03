@@ -1,0 +1,1 @@
+export const API_URL = 'https://organic-chainsaw-9jgvvwq459fp4w-5000.app.github.dev'
