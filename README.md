@@ -1,12 +1,7 @@
-# GitHub Codespaces ♥️ React
+# Weather dashboard made using React + NodeJS + Open source weather API (https://www.weatherapi.com/)
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
-
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
-
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
-
-This project was bootstrapped for you with [Vite](https://vitejs.dev/).
+The proxy API for the actual weather API is in the server folder which is made with ExpressJS, for caching I have used the library
+called as Node-Cache.
 
 ## Available Scripts
 
@@ -14,57 +9,20 @@ In the project directory, you can run:
 
 ### `npm start`
 
-We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
+This will start the frontend, when using codespaces this is executed automatically.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000/](http://localhost:3000/) in the built-in Simple Browser (`Cmd/Ctrl + Shift + P > Simple Browser: Show`) to view your running application.
+### `cd server`
+### `node server.js`
 
-The page will reload automatically when you make changes.\
-You may also see any lint errors in the console.
+This will start the backend server, right now the URL for the API is of the github codespace machine,
+it can also be modified to localhost:5000 in future.
 
-### `npm test`
+I have not committed any .env files or node_modules to the repo, the API_KEY is with me and to run this project on your local you will either
+need my key or create your own API key from https://www.weatherapi.com/ and add it in a .env file inside the server folder as WEATHERAPI_API_KEY = API_KEY.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I have also used browsers geolocation API which uses users latitude and longitude to fetch the weather if the user has given
+permissions to use it. The icons for the weather conditions have also been implemented.
 
-### `npm run build`
+I am attaching a video demo of the project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/).
-
-To learn Vitest, a Vite-native testing framework, go to [Vitest documentation](https://vitest.dev/guide/)
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://sambitsahoo.com/blog/vite-code-splitting-that-works.html](https://sambitsahoo.com/blog/vite-code-splitting-that-works.html)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf](https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf)
-
-### Advanced Configuration
-
-This section has moved here: [https://vitejs.dev/guide/build.html#advanced-base-options](https://vitejs.dev/guide/build.html#advanced-base-options)
-
-### Deployment
-
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
-
-### Troubleshooting
-
-This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+[Demo.webm](https://github.com/user-attachments/assets/6b85c784-896d-4443-aa09-2878f124388a)
